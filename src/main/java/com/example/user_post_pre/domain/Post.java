@@ -15,5 +15,7 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    private Long userId;
+
+    @ManyToOne
+    private User user; // 객체 참조
 }
